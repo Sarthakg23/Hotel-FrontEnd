@@ -1,0 +1,13 @@
+<div class="card" style="margin:10px; border: 2px solid grey; border-radius:0 0 15px 15px; width:300px; box-shadow: 5px 5px 100px rgb(172, 163, 163);">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/360px-Mumbai_Aug_2018_%2843397784544%29.jpg" alt="taj" height="280px" >
+    <div style="padding: 15px;">
+        <h3>{{hotel.HOTELNAME}}</h3>
+        <h5>{{hotel.HCITY}}</h5>
+        <p>{{hotel.HSTATE}}</p>
+        <button class="btn btn-primary btn-sm float-left"
+          id="right" style="color:white" routerLink="/hotel/{{hotel.HOTELID}}">
+         Details
+        </button> 
+    </div>
+    
+</div>

@@ -1,0 +1,40 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/360px-Mumbai_Aug_2018_%2843397784544%29.jpg" width="100%" height="400px" style="border: 5px solid black">
+<div style="width: 100%; display: table; margin-left: 2px; margin-top: 2px;">
+    <div style="display: table-row;">
+        <div class="card" style="width: 50%; display: table-cell;  border: 2px solid grey; border-radius:0 0 15px 15px; box-shadow: 5px 5px 100px rgb(172, 163, 163);">
+            <h1 style="text-align: center;">Details</h1>
+            <h5>ID: {{hotel.HOTELID}}</h5>
+            <h5>NAME: {{hotel.HOTELNAME}}</h5>
+            <h5>CITY: {{hotel.HCITY}}</h5>
+            <h5>STATE: {{hotel.HSTATE}}</h5>
+            <h5>ROOM COST: {{hotel.ROOMPRICE}}</h5>
+            <h5>TOTAL ROOMS: {{hotel.TOTALROOMS}}</h5>
+            <h5>BOOKED ROOMS: {{hotel.BOOKEDROOMS}}</h5>
+        </div>
+        <div class="card" style="display: table-cell; border: 2px solid grey; border-radius:0 0 15px 15px; box-shadow: 5px 5px 100px rgb(172, 163, 163); margin-left: 2px;  "> 
+            <h1 style="text-align: center;">BOOKING FORM</h1>
+            <form  #form="ngForm" (ngSubmit)="onSubmit(form)" style="text-align: center;" >
+                <fieldset [disabled]="hotel.TOTALROOMS==hotel.BOOKEDROOMS? true : false">
+                Choose Rooms
+                <br>
+                <input #count type="number" min="1" name="rooms" max="{{hotel.TOTALROOMS-hotel.BOOKEDROOMS}}" (change)="onChange(count.value)" ngModel required >
+                <br>
+                Start Date
+                <br>
+                <input type="date" name="sdate" ngModel required>
+                <br>
+                End Date
+                <br>
+                <input type="date" name="edate" ngModel required>
+                <br>
+                Amount
+                <br>
+                <input type="number" readonly [value]="amount" ngModel  name="amt">
+                <br>
+                <br>
+                <input type="submit" value="BOOK">
+            </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

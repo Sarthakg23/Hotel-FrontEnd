@@ -1,0 +1,48 @@
+<div class="card">
+    <!-- Card -->
+
+    <div *ngFor='let booking of bookings'>
+     <div class="card mb-4 mr-2 ml-2">
+       <div class="card-horizontal pt-1 mb-1 ml-1">
+       <!--Card image-->
+       <div class="view overlay">
+                                
+                   <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/360px-Mumbai_Aug_2018_%2843397784544%29.jpg" alt="Card image cap">
+                  
+
+        </div>
+
+       <!--Card content-->
+       <div class="card-body">
+
+         <!--Title-->
+         <h6 class="card-title"><a class="text-danger" style="font-weight:bold">Hotel ID</a> {{booking.HOTELID}}</h6>
+         <br>
+         <h6 class="card-title"><a class="text-danger" style="font-weight:bold">Rooms Booked</a> {{booking.ROOMS}}</h6>
+         <br>
+         <h6 class="card-title"><a class="text-danger" style="font-weight:bold">Booked From</a> {{booking.BOOKEDFROM}}</h6>
+         <br>
+         <h6 class="card-title"><a class="text-danger" style="font-weight:bold">Booked Till</a> {{booking.BOOKEDTILL}}</h6>
+         <br>
+         <h6 class="card-title"><a class="text-danger" style="font-weight:bold">Amount</a> {{booking.AMOUNT}}</h6>
+         <br>
+         <h6 class="card-title"><a class="text-danger" style="font-weight:bold">Booking Date</a> {{booking.BOOKINGDATE}}</h6>
+         <br>
+         <h6 class="card-title"><a class="text-danger" style="font-weight:bold">Booking Status</a> {{booking.BOOKINGSTATUS}} </h6> <button (click)="cancel(booking.BOOKINGID)">Cancel</button>
+        
+         
+        
+              
+           
+         
+       </div>
+
+         </div>
+
+     </div>
+
+     <!-- Card -->
+
+ </div>
+</div>
+ <!--/.Card-->

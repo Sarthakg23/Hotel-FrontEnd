@@ -1,0 +1,17 @@
+<button class="btn btn-primary btn-sm float-right"
+          id="right" style="margin-left: 5px; color:white" (click)="allHotels()">
+         All Hotels
+        </button> 
+<button class="btn btn-primary btn-sm float-right" style="margin-left: 5px; color:white;" 
+          id="right" (click)="availableHotels()">
+         Available Hotels
+        </button> 
+ <div class="row">
+ <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+<div *ngFor='let hotel of hotels' class="col-md-3">
+    <app-hotel-card [hotel]='hotel'></app-hotel-card>
+<div>
+</div>
+</div>
+
+<!-- class="col-sm-4" -->

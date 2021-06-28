@@ -1,0 +1,21 @@
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.scroll-cards-height {
+position: relative;
+overflow-y: scroll;
+height: 400px; }
+
+/* .card-img-top {
+    height: 20vw;
+    width: 55vw;
+} */
+
+.card-footer{
+/* position:absolute; */
+  bottom:0;
+  border: none;
+  background-color:#FFFFFF;
+}

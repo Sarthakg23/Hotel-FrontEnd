@@ -1,0 +1,20 @@
+<div class="bodycss" style="height: 100vh;">
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)" method="POST">
+  <div class="content">
+    <h1 class="heading" style="text-align: center;">SignIn Form</h1>
+<div class="card" style="display: flex; align-items: center; justify-content: center; flex-direction: column;"> 
+    Email
+    <br><input type="text" name="email" ngModel required class="textbox">
+    <br>
+    Last Name
+    <br><input type="text" name="password" ngModel required class="textbox">
+    <br>
+    <input type="submit"  class="btn btn-primary btn-lg btn-block" style="width:50%">
+    <br>
+    <a routerLink=''>Sign Up</a>
+</div>
+</div>
+  </form>
+</div>
+  
+

@@ -1,0 +1,31 @@
+<div class="bodycss" style="height: 100%;">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="content">
+        <h1 class="heading" style="text-align: center;">SignUp Form</h1>
+    <div class="card" style="display: flex; align-items: center; justify-content: center; flex-direction: column;"> 
+     First Name:
+     <br><input type="text" name="fname" class="textbox" ngModel required>
+      <br>
+      
+     Last Name:
+     <br><input type="text" name="lname" class="textbox" ngModel required>
+      <br>
+      Email
+      <br><input type="email" name="email" class="textbox" ngModel required>
+      <br>
+      Password:
+      <br><input type="text" name="password" class="textbox" ngModel required>
+      <br>
+      DOB:
+      <br><input type="date" name="dob" class="textbox" ngModel required>
+      <br>
+      <input type="submit" class="btn btn-primary btn-lg btn-block" style="width:50%">
+      <br>
+      <br>
+      <a routerLink='/signIn'>Sign In</a>
+      </div>
+      </div>
+    </form>
+    <br>
+    <br>
+    </div>
